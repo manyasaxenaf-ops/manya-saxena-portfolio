@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manya Saxena | GIS and Remote Sensing Portfolio</title>
+<meta name="description" content="Professional portfolio of Manya Saxena, M.Sc. candidate in GIS and Remote Sensing. Satellite-based crop mapping, hazard and terrain analysis, hydrology, and geospatial machine learning.">
+<meta property="og:title" content="Manya Saxena | GIS and Remote Sensing Portfolio">
+<meta property="og:description" content="Satellite-based crop mapping, hazard analysis, hydrology and geospatial machine learning.">
+<meta property="og:type" content="website">
+<style>
+:root{
+  --navy:#16314F;
+  --navy-deep:#0F2338;
+  --teal:#0B6477;
+  --ink:#1F2933;
+  --muted:#52606D;
+  --rule:#CBD2D9;
+  --panel:#F1F4F7;
+  --white:#FFFFFF;
+  --font:"Times New Roman",Times,serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--font);font-size:19px;line-height:1.6}
+h1,h2,h3,h4,p,ul,dl,dd,table,figure{margin:0}
+a{color:var(--teal);text-underline-offset:3px}
+a:hover{color:var(--navy)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* navigation */
+.nav{position:sticky;top:0;z-index:20;background:var(--navy-deep)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:52px;gap:20px;flex-wrap:wrap}
+.nav .id{color:#fff;font-weight:700;font-size:1.1rem;text-decoration:none}
+.nav ul{list-style:none;padding:0;display:flex;gap:22px;flex-wrap:wrap}
+.nav ul a{color:#D9E2EC;text-decoration:none;font-size:1rem}
+.nav ul a:hover{color:#fff;text-decoration:underline}
+
+/* header */
+.masthead{background:var(--navy);color:#fff;padding:52px 0 44px}
+.masthead .wrap{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+.masthead h1{font-size:clamp(2.4rem,6vw,3.6rem);line-height:1.08;font-weight:700}
+.masthead .title{font-size:1.35rem;margin-top:10px;color:#E4ECF4}
+.masthead .focus{margin-top:6px;color:#B9C7D6}
+.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin-top:28px;border-top:1px solid rgba(255,255,255,.25)}
+.facts div{padding:14px 18px 14px 0}
+.facts dt{font-weight:700;font-size:.95rem;color:#B9C7D6}
+.facts dd{font-size:1.05rem;color:#fff}
+.photo{width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid rgba(255,255,255,.5)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.btn{display:inline-block;font-family:var(--font);font-weight:700;font-size:1rem;padding:10px 22px;border:2px solid #fff;color:#fff;text-decoration:none;border-radius:3px}
+.btn:hover{background:#fff;color:var(--navy)}
+.btn.solid{background:#fff;color:var(--navy)}
+.btn.solid:hover{background:#E4ECF4}
+.btn.dark{border-color:var(--navy);color:var(--navy)}
+.btn.dark:hover{background:var(--navy);color:#fff}
+.btn.dark.solid{background:var(--navy);color:#fff}
+.btn.dark.solid:hover{background:var(--navy-deep)}
+
+/* sections */
+.sec{padding:52px 0 8px}
+.sec:last-of-type{padding-bottom:52px}
+.sec h2{font-size:1.75rem;color:var(--navy);font-weight:700;border-bottom:2px solid var(--navy);padding-bottom:8px;margin-bottom:26px}
+.sec h3.group{font-size:1.3rem;color:var(--teal);margin:34px 0 14px;font-weight:700}
+.lead{max-width:44em}
+.lead p+p{margin-top:.9em}
+
+/* tables */
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;vertical-align:top;padding:12px 16px;border-bottom:1px solid var(--rule)}
+th{background:var(--panel);color:var(--navy);font-weight:700}
+.comp th[scope="row"]{width:240px;background:transparent}
+caption{text-align:left;font-weight:700;color:var(--navy);padding-bottom:10px;caption-side:top}
+
+/* experience */
+.job{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:22px 0;border-bottom:1px solid var(--rule)}
+.job:first-of-type{padding-top:0}
+.job .when{color:var(--muted);font-size:1rem}
+.job h3{font-size:1.25rem;color:var(--ink)}
+.job .org{color:var(--teal);font-weight:700;margin-bottom:8px}
+.job ul{padding-left:1.15em}
+.job li{margin-bottom:6px}
+
+/* projects */
+.proj{border:1px solid var(--rule);border-left:5px solid var(--navy);padding:22px 26px;margin-bottom:22px;background:var(--white)}
+.proj .head{display:flex;justify-content:space-between;gap:16px;align-items:baseline;flex-wrap:wrap;margin-bottom:12px}
+.proj h4{font-size:1.2rem;color:var(--ink)}
+.tag{font-size:.9rem;color:var(--navy);background:var(--panel);padding:2px 10px;border:1px solid var(--rule);white-space:nowrap}
+.proj dl{display:grid;grid-template-columns:150px 1fr;gap:8px 20px}
+.proj dt{font-weight:700;color:var(--navy)}
+.proj figure{margin-top:16px}
+.proj figure img{max-width:100%;height:auto;border:1px solid var(--rule);display:block}
+.proj figcaption{font-size:.9rem;color:var(--muted);margin-top:6px}
+.plink{margin-top:14px}
+.proj.feature{border-left-color:var(--teal);background:var(--panel)}
+
+/* lists */
+.plain{padding-left:1.15em}
+.plain li{margin-bottom:9px}
+.edu{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:16px 0;border-bottom:1px solid var(--rule)}
+.edu .when{color:var(--muted)}
+.edu h3{font-size:1.2rem}
+
+/* contact */
+.contact dl{display:grid;grid-template-columns:140px 1fr;gap:8px 20px;margin-bottom:22px}
+.contact dt{font-weight:700;color:var(--navy)}
+.btnrow{display:flex;flex-wrap:wrap;gap:12px}
+footer{margin-top:48px;border-top:1px solid var(--rule);padding:22px 0 36px;color:var(--muted);font-size:.95rem}
+
+@media (max-width:820px){
+  body{font-size:18px}
+  .masthead .wrap{grid-template-columns:1fr}
+  .photo{width:110px;height:110px}
+  .facts{grid-template-columns:1fr}
+  .job,.edu{grid-template-columns:1fr;gap:4px}
+  .proj dl,.contact dl{grid-template-columns:1fr;gap:2px}
+  .proj dd,.contact dd{margin-bottom:10px}
+  .comp th[scope="row"]{width:auto;display:block;padding-bottom:0;border-bottom:0}
+  .comp td{display:block;padding-top:2px}
+  .nav ul{gap:14px}
+}
+@media print{
+  .nav,.cta,.btnrow{display:none}
+  .masthead{background:#fff;color:#000;padding:0}
+  .masthead .title,.masthead .focus,.facts dt,.facts dd{color:#000}
+  .proj{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="wrap">
+    <a class="id" href="#top">Manya Saxena</a>
+    <ul>
+      <li><a href="#profile">Profile</a></li>
+      <li><a href="#competencies">Competencies</a></li>
+      <li><a href="#experience">Experience &amp; Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#training">Training</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="masthead" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Manya Saxena</h1>
+      <p class="title">M.Sc. Candidate, GIS &amp; Remote Sensing</p>
+      <p class="focus">Satellite Image Analysis, Geospatial Modelling and Machine Learning</p>
+      <dl class="facts">
+        <div><dt>Institution</dt><dd>Amity University Noida</dd></div>
+        <div><dt>Location</dt><dd>Noida, Uttar Pradesh, India</dd></div>
+        <div><dt>Domains</dt><dd>Agriculture, Disaster Management, Urban Planning and GeoAI</dd></div>
+        <div><dt>Career interest</dt><dd>Geospatial consulting and development</dd></div>
+      </dl>
+      <div class="cta">
+        <a class="btn solid" href="#experience">View experience and projects</a>
+        <a class="btn" href="Manya_Saxena_CV.pdf">Download CV</a>
+      </div>
+    </div>
+    <div id="photoSlot"></div>
+  </div>
+</header>
+
+<main>
+
+<section class="sec" id="profile">
+  <div class="wrap">
+    <h2>Professional Profile</h2>
+    <div class="lead">
+      <p>M.Sc. candidate in GIS and Remote Sensing with applied experience in satellite image analysis, geospatial modelling and machine learning. Project work spans agricultural crop classification, landslide susceptibility and deformation mapping, groundwater potential assessment and urban air quality analysis.</p>
+      <p>Completed internships at the Regional Remote Sensing Centre (North), NRSC, ISRO, classifying sugarcane varieties from multi-temporal satellite imagery using machine learning and deep learning models, and at ICR-ER, Ministry of Home Affairs, analysing spatial patterns of lightning and cloudburst events across India.</p>
+      <p>Seeking opportunities in geospatial consulting and development, applying remote sensing, GeoAI and spatial analysis to environmental, disaster management and urban planning applications.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="competencies">
+  <div class="wrap">
+    <h2>Core Technical Competencies</h2>
+    <table class="comp">
+      <tbody>
+        <tr><th scope="row">GIS and Spatial Analysis</th><td>ArcGIS Pro, QGIS, geoprocessing, raster and vector data processing, weighted overlay, multi-criteria analysis (AHP), spatial modelling, thematic mapping</td></tr>
+        <tr><th scope="row">Remote Sensing</th><td>Google Earth Engine, ERDAS Imagine, ENVI, SNAP, Sentinel-1 and Sentinel-2, optical and SAR image analysis, InSAR deformation mapping, image classification</td></tr>
+        <tr><th scope="row">Programming and Machine Learning</th><td>Python (GeoPandas, Matplotlib), JavaScript (Earth Engine API), Random Forest, XGBoost, neural networks, Vision Transformers, model interpretation with SHAP</td></tr>
+        <tr><th scope="row">Accuracy Assessment</th><td>Confusion matrix, overall accuracy, Kappa statistics, model comparison</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="sec" id="experience">
+  <div class="wrap">
+    <h2>Experience and Projects</h2>
+
+    <h3 class="group">Internships</h3>
+    <div class="job">
+      <div class="when">May 2026 to July 2026<br>New Delhi, India</div>
+      <div>
+        <h3>Project Intern, Remote Sensing &amp; GIS</h3>
+        <p class="org">Regional Remote Sensing Centre (North), NRSC, ISRO</p>
+        <ul>
+          <li>Delineated sugarcane varieties from multi-temporal satellite imagery processed in Google Earth Engine.</li>
+          <li>Implemented and benchmarked Random Forest, XGBoost and Vision Transformer models on the same classification task.</li>
+          <li>Produced classified crop-variety maps and assessed accuracy using confusion matrices and Kappa statistics.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="when">May 2025 to June 2025<br>India</div>
+      <div>
+        <h3>Disaster Management Data Analyst Intern</h3>
+        <p class="org">ICR-ER, Ministry of Home Affairs, Government of India</p>
+        <ul>
+          <li>Analysed lightning and cloudburst disaster datasets for 2011 to 2023 and mapped their spatial distribution across India.</li>
+          <li>Identified spatial patterns and examined the physical and socio-environmental factors that influence where events occur and concentrate.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="group">Research Projects</h3>
+    <article class="proj" data-project="landslide">
+      <div class="head"><h4>Landslide Susceptibility Mapping, Raigad District</h4><span class="tag">2025 to 2026</span></div>
+      <dl>
+        <dt>Study area</dt><dd>Raigad District</dd>
+        <dt>Objective</dt><dd>Model the spatial likelihood of landslides across the district.</dd>
+        <dt>Data and methods</dt><dd>Prepared and integrated about 20 environmental and terrain conditioning factors in GIS. Developed and compared XGBoost, MLP-NN and Ensemble XGBoost-DLNN models.</dd>
+        <dt>Deliverables</dt><dd>Susceptibility zonation maps showing spatial variation in landslide risk.</dd>
+      </dl>
+    </article>
+
+    <article class="proj" data-project="wayanad">
+      <div class="head"><h4>Landslide Deformation and Displacement Mapping Using SAR Data</h4><span class="tag">2025 to 2026</span></div>
+      <dl>
+        <dt>Study area</dt><dd>Wayanad, site of the 2024 landslide</dd>
+        <dt>Objective</dt><dd>Quantify surface deformation and displacement and assess landslide extent.</dd>
+        <dt>Data and methods</dt><dd>Sentinel-1 SAR datasets, with an integrated optical versus SAR analysis to evaluate terrain instability and displacement patterns.</dd>
+        <dt>Deliverables</dt><dd>Deformation and displacement maps with landslide extent assessment.</dd>
+      </dl>
+    </article>
+
+    <article class="proj" data-project="groundwater">
+      <div class="head"><h4>Groundwater Potential Zone Mapping Using AHP</h4><span class="tag">2025 to 2026</span></div>
+      <dl>
+        <dt>Objective</dt><dd>Identify and classify zones of groundwater potential.</dd>
+        <dt>Data and methods</dt><dd>Analytical Hierarchy Process with weighted overlay of seven thematic layers: slope, geomorphology, drainage density, land use and land cover, rainfall, soil and lineament density.</dd>
+        <dt>Deliverables</dt><dd>Groundwater potential zone map.</dd>
+      </dl>
+    </article>
+
+    <article class="proj" data-project="airquality">
+      <div class="head"><h4>Spatial and Temporal Air Quality Assessment, Delhi NCR</h4><span class="tag">2025 to 2026</span></div>
+      <dl>
+        <dt>Study area</dt><dd>Delhi NCR</dd>
+        <dt>Objective</dt><dd>Understand how air quality varies across the region and over time.</dd>
+        <dt>Data and methods</dt><dd>Spatial-temporal analysis of pollution trends using geospatial and statistical approaches, evaluating changes in pollutant concentration and regional distribution.</dd>
+      </dl>
+    </article>
+  </div>
+</section>
+
+<section class="sec" id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <div class="edu">
+      <div class="when">2025 to 2027</div>
+      <div><h3>M.Sc. in GIS &amp; Remote Sensing</h3><p>Amity University Noida, India. CGPA 9.56</p></div>
+    </div>
+    <div class="edu">
+      <div class="when">2022 to 2025</div>
+      <div><h3>B.A. (Hons) Geography</h3><p>Indraprastha College for Women, University of Delhi. CGPA 8.84</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="training">
+  <div class="wrap">
+    <h2>Training, Certifications and Recognition</h2>
+    <ul class="plain">
+      <li>ISPRS STEP Summer School, 5-day programme on GeoAI for Future Earth.</li>
+      <li>GeoAI Mastery Program, 3 months, Revomap Solutions and Darshini Group of Solutions.</li>
+      <li>30-hour workshop by AIGIRS and the Department of Geoinformatics (Z_GIS), University of Salzburg, Austria.</li>
+      <li>Esri MOOC “Going Places with Spatial Analysis”, 6 weeks.</li>
+      <li>Training in Python for Geospatial Applications, 3 days.</li>
+      <li>Presented a research paper on Urban Hazards and Disaster Resilience at an international conference on urban development.</li>
+      <li>Major General Virendra Singh Memorial Prize for the highest CGPA, 2023 to 2024.</li>
+      <li>Received a merit scholarship during the M.Sc. programme.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="sec contact" id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <dl>
+      <dt>Email</dt><dd><a href="mailto:manyasaxenaf@gmail.com">manyasaxenaf@gmail.com</a></dd>
+      <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/manya-saxena-969b24262" target="_blank" rel="noopener">linkedin.com/in/manya-saxena-969b24262</a></dd>
+      <dt>Location</dt><dd>Noida, Uttar Pradesh, India</dd>
+    </dl>
+    <div class="btnrow">
+      <a class="btn dark solid" href="mailto:manyasaxenaf@gmail.com">Send an email</a>
+      <a class="btn dark" href="Manya_Saxena_CV.pdf">Download CV</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">Manya Saxena, M.Sc. GIS &amp; Remote Sensing, Amity University Noida</div>
+</footer>
+
+<script>
+/* ---------- EDIT HERE ----------
+   PHOTO   : file name of a portrait uploaded next to index.html, e.g. "photo.jpg". Leave "" for none.
+   LINKS   : paste a URL between the quotes to show an "Open project" link under that project.
+   FIGURES : add a map or figure to a project. Upload the image next to index.html, then set
+             src (file name) and caption. Leave src "" for no figure.
+   Project keys: landslide, wayanad, groundwater, airquality */
+const PHOTO = "";
+
+const LINKS = {
+  landslide: "", wayanad: "",
+  groundwater: "", airquality: ""
+};
+
+const FIGURES = {
+  landslide:   { src: "", caption: "" },
+  wayanad:     { src: "", caption: "" },
+  groundwater: { src: "", caption: "" },
+  airquality:  { src: "", caption: "" }
+};
+/* -------------------------------- */
+
+(function () {
+  if (PHOTO) {
+    var img = document.createElement("img");
+    img.src = PHOTO; img.alt = "Portrait of Manya Saxena"; img.className = "photo";
+    document.getElementById("photoSlot").appendChild(img);
+  }
+  document.querySelectorAll("[data-project]").forEach(function (el) {
+    var key = el.getAttribute("data-project");
+    var fig = FIGURES[key];
+    if (fig && fig.src) {
+      var f = document.createElement("figure");
+      var im = document.createElement("img");
+      im.src = fig.src; im.alt = fig.caption || "Project figure";
+      f.appendChild(im);
+      if (fig.caption) {
+        var c = document.createElement("figcaption");
+        c.textContent = fig.caption; f.appendChild(c);
+      }
+      el.appendChild(f);
+    }
+    if (LINKS[key]) {
+      var p = document.createElement("p");
+      p.className = "plink";
+      var a = document.createElement("a");
+      a.href = LINKS[key]; a.target = "_blank"; a.rel = "noopener";
+      a.textContent = "Open project";
+      p.appendChild(a); el.appendChild(p);
+    }
+  });
+})();
+</script>
+</body>
+</html>
